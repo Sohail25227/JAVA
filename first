@@ -1,0 +1,18 @@
+Java is an object oriented programming language 
+invented in yeear 1991
+by sun microsystems
+one of the founder james gosle named it 'oak'
+Java compiled code to byte code and interpret it to machine code
+requires JDK and JRE
+jDK: java developement kit - collections of tools for development and running Java program;
+JRE: java runtime environment - helps in executing program developed in Java
+
+First Prog
+
+//
+public class Main{
+    public static void main(String[] args) {
+        System.out.println("HEllO world");
+    }
+}
+//
