@@ -1,0 +1,65 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class rockpaper {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.println("Let's play Rock-Paper-Scissors!");
+        int n=3;
+        int c1=0;
+        int c2=0;
+        while(n>0)
+        {
+        System.out.println("Choose one: (1) Rock, (2) Paper, (3) Scissors");
+
+        int playerChoice = input.nextInt();
+
+        if (playerChoice < 1 || playerChoice > 3) {
+            System.out.println("Invalid choice. Please choose again.");
+            return;
+        }
+        
+        int computerChoice = random.nextInt(3)+1;
+           
+        System.out.println("You chose " + convertChoice(playerChoice));
+        System.out.println("Computer chose " + convertChoice(computerChoice));
+      
+        if (playerChoice == computerChoice) {
+            System.out.println("It's a tie!");
+        } else if ((playerChoice == 1 && computerChoice == 3) || 
+                   (playerChoice == 2 && computerChoice == 1) || 
+                   (playerChoice == 3 && computerChoice == 2)) {
+            System.out.println("You win!");
+            c1++;
+        } else {
+            System.out.println("Computer wins!");
+            c2++;
+        }
+        n--;
+    }
+    if(c1>c2)
+    {
+        System.out.println("you won");
+    }
+    else{
+        System.out.println("Computer won");
+    }
+    }
+
+    public static String convertChoice(int choice) {
+        switch (choice) {
+            case 1:
+                return "Rock";
+            case 2:
+                return "Paper";
+            case 3:
+                return "Scissors";
+            default:
+                return "";
+        }
+    }
+} 
+    
+
